@@ -11,6 +11,8 @@ import { useState } from "react";
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
+  const logoUrl = "https://d2xsxph8kpxj0f.cloudfront.net/93863331/b3FCUFaHnYZVwQNY6o6vv9/לוגומוצרללארקע_52437f3a.png";
+
   const heroVideoUrl =
     "https://d2xsxph8kpxj0f.cloudfront.net/93863331/b3FCUFaHnYZVwQNY6o6vv9/vmc-vr-hero-bg_503b6c0d.mp4";
 
@@ -63,7 +65,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container flex items-center justify-between py-4">
-          <div className="text-2xl font-bold text-primary">VMC-VR</div>
+          <img src={logoUrl} alt="VR-TheraFix" className="h-12 w-auto" />
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-sm hover:text-primary transition-colors">
               אודות
