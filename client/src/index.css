@@ -117,8 +117,27 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    direction: rtl;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.3px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Rubik', serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -130,6 +149,18 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  /* RTL-specific adjustments */
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] select {
+    text-align: right;
   }
 }
 
@@ -151,8 +182,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-right: 1rem; /* 16px - mobile padding (RTL) */
+    padding-left: 1rem;
   }
 
   .flex {
@@ -162,16 +193,35 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
+      padding-right: 1.5rem; /* 24px - tablet padding (RTL) */
+      padding-left: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
+      padding-right: 2rem; /* 32px - desktop padding (RTL) */
+      padding-left: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+
+  /* Premium design enhancements */
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button, [role="button"] {
+    @apply transition-all duration-300;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Video background styling */
+  video {
+    @apply w-full h-full object-cover;
   }
 }
