@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.gitignore
+.manus-logs
+*.log
+.env*
+!.env.example
+README.md
+DESIGN_SPEC.md
