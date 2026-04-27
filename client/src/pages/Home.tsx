@@ -13,7 +13,7 @@ export default function Home() {
   const logoUrl =
     "https://d2xsxph8kpxj0f.cloudfront.net/93863331/b3FCUFaHnYZVwQNY6o6vv9/לוגומוצרללארקע_52437f3a.png";
   const heroVideoUrl =
-    "https://d2xsxph8kpxj0f.cloudfront.net/93863331/b3FCUFaHnYZVwQNY6o6vv9/vmc-vr-hero-bg_503b6c0d.mp4";
+    "https://d2xsxph8kpxj0f.cloudfront.net/93863331/b3FCUFaHnYZVwQNY6o6vv9/vmc-vr-hero-bg-v2_6b29c25d.mp4";
 
   const faqItems = [
     {
