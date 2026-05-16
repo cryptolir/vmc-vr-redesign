@@ -184,10 +184,5 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
-    hmr: {
-      protocol: "wss",
-      host: "3000-itmlhm5xof1e3fb1h0ez8-ab0b96f4.us2.manus.computer",
-      port: 443,
-    },
   },
 });
