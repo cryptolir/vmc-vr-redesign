@@ -74,8 +74,8 @@ export default function Home() {
       </nav>
 
       {/* ── Section 1: Hero ──────────────────────────────────────────────── */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+      <section className="relative w-full flex items-center justify-center overflow-hidden" style={{ aspectRatio: "16 / 9", minHeight: "100vh" }}>
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center" }}>
           <source src={heroVideoUrl} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/55" />
